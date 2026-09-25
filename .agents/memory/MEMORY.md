@@ -62,3 +62,4 @@
 - [Wouter query navigation](wouter-query-navigation.md) — components tracking query-only tabs need `useSearch`; `useLocation` alone won't refresh active navigation markers.
 - [Moderation threshold compatibility](moderation-threshold-defaults.md) — fill missing rule defaults only when no accepted legacy alias is saved; keep all aliases aligned in the editor.
 - [Discord mobile embed layout](discord-mobile-embed-layout.md) — inline fields stack on phones; avoid code-block/Unicode bars and keep previews mobile-first.
+- [GitHub bulk snapshot uploads](github-bulk-snapshot-upload.md) — with the GitHub connector, upload blobs first and create large trees in sequential batches if one tree request returns 502.
