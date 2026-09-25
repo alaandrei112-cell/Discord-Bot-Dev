@@ -24,6 +24,6 @@ Git CLI pushes are not authenticated in this workspace. Do not add a token to a 
 1. Read the current `main` commit and use it as the new commit's parent.
 2. Apply only the intended changed paths on top of that commit; do not replace the branch with an unrelated workspace history or blindly upload a stale full snapshot.
 3. Update `main` without force. If its head moved, fetch the new head and reconcile before retrying.
-4. Fetch `github-snapshot/main` and verify the result before continuing.
+4. Fetch `github-snapshot/main` and verify the published tree. If it exactly matches the workspace, align the local branch to the fetched commit with `git reset --mixed github-snapshot/main`; this changes the branch and index, not the files on disk. Keep any local commits that were not included under a backup branch before moving the branch. If the trees differ, do not reset—preserve and reconcile the remaining local work first.
 
 For simultaneous edits to the same file, stop and resolve the file-level conflict explicitly. Keep the GitHub integration responsible for authentication; its credentials must never be copied into project files or chat.
