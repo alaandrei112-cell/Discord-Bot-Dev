@@ -1,0 +1,353 @@
+⚔️ MODULUL DE MODERARE — IDEI COMPLETE (fără legătură cu jocul)
+🌑 1. Moderare automată (AutoMod)
+Sistem complet, configurabil din site:
+
+Auto‑warn (avertisment automat)
+
+Auto‑mute (mute automat)
+
+Auto‑kick (kick automat)
+
+Auto‑ban (ban automat)
+
+Auto‑delete (ștergere automată a mesajelor)
+
+Auto‑filter (filtru de cuvinte)
+
+Auto‑link‑block (blochează linkuri)
+
+Auto‑emoji‑limit (limitează spamul de emoji)
+
+Auto‑caps‑limit (limitează CAPS)
+
+Auto‑repeat‑block (blochează spamul repetitiv)
+
+Setări în site:
+ON/OFF pentru fiecare funcție
+
+nivel de severitate (Soft / Normal / Hard)
+
+listă de cuvinte interzise
+
+listă de linkuri interzise
+
+limite (mesaje/secundă, emoji, caps)
+
+acțiune aplicată (warn/mute/kick/ban)
+
+🛡️ 2. Anti‑Raid
+Sistem care detectează intrări masive.
+
+detectare intrări rapide
+
+detectare conturi noi (sub 7 zile)
+
+blocare automată a serverului
+
+alertă staff
+
+acțiune automată (mute/kick/ban)
+
+Setări în site:
+câți useri pot intra pe minut
+
+ce acțiune se aplică automat
+
+dacă se activează lockdown
+
+canalul de alertă
+
+🕯️ 3. Anti‑Spam
+Detectează:
+
+spam de mesaje
+
+spam de editări
+
+spam de ștergeri
+
+spam de mențiuni
+
+spam de emoji
+
+Setări în site:
+limite (mesaje/secundă)
+
+acțiune automată
+
+canal de log
+
+🌫️ 4. Anti‑Flood
+Detectează:
+
+mesaje foarte lungi
+
+spam de caractere
+
+spam de CAPS
+
+spam de simboluri
+
+Setări în site:
+limite de caractere
+
+limite de CAPS
+
+acțiune automată
+
+👁️ 5. Moderare manuală (Staff Tools)
+Comenzi:
+
+/warn
+
+/mute
+
+/kick
+
+/ban
+
+/unmute
+
+/purge
+
+/slowmode
+
+/lock
+
+/unlock
+
+/nick (schimbare nickname)
+
+/role (adăugare rol)
+
+Setări în site:
+permisiuni staff
+
+cine poate folosi ce comandă
+
+loguri pentru fiecare acțiune
+
+📂 6. Sistem de cazuri (Case System)
+Fiecare sancțiune creează un dosar:
+
+user
+
+staff
+
+motiv
+
+dovezi
+
+timestamp
+
+status (deschis/închis)
+
+Setări în site:
+vezi cazuri
+
+închizi cazuri
+
+adaugi notițe
+
+cauți cazuri
+
+export cazuri
+
+🔒 7. Audit complet
+Audit = jurnal intern pentru owner.
+
+Include:
+
+acțiuni staff
+
+acțiuni bot
+
+modificări de permisiuni
+
+modificări de setări
+
+modificări de roluri
+
+modificări de canale
+
+Setări în site:
+activare audit
+
+nivel de detaliu
+
+canal audit
+
+🌀 8. Moderare pe roluri
+Setări:
+
+roluri care pot fi sancționate
+
+roluri protejate (staff, owner)
+
+roluri ignorate de AutoMod
+
+roluri cu permisiuni speciale
+
+🧱 9. Moderare pe canale
+Setări:
+
+canale ignorate
+
+canale protejate
+
+canale cu slowmode automat
+
+canale cu moderare strictă
+
+canale cu moderare soft
+
+🧩 10. Moderare pe timp
+Setări:
+
+moderare strictă noaptea
+
+moderare soft ziua
+
+moderare automată în weekend
+
+moderare automată la evenimente mari
+
+🕵️ 11. Detectare comportament suspect
+Botul poate detecta:
+
+schimbări rapide de nickname
+
+schimbări rapide de roluri
+
+editări masive
+
+ștergeri masive
+
+flood de join/leave
+
+activitate neobișnuită
+
+Setări în site:
+nivel de sensibilitate
+
+acțiune automată
+
+alertă staff
+
+🧙 12. Moderare AI (Oracolul Judecător)
+AI detectează:
+
+toxicitate
+
+injurii
+
+atacuri
+
+bullying
+
+spam inteligent
+
+trolling
+
+Setări în site:
+sensibilitate AI
+
+ton (serios, calm, strict)
+
+acțiune automată
+
+log AI
+
+🧩 13. Moderare pe servere multiple
+Dacă ai mai multe servere:
+
+setări separate
+
+staff separat
+
+loguri separate
+
+audit separat
+
+cazuri separate
+
+🧱 14. Moderare cu nivele
+Niveluri:
+
+Nivel 1: avertisment
+
+Nivel 2: mute
+
+Nivel 3: kick
+
+Nivel 4: ban
+
+Setări în site:
+câte abateri până la nivelul următor
+
+resetare automată a abaterilor
+
+loguri pentru fiecare nivel
+
+🔥 15. Moderare vizuală (Embed Builder)
+Poți seta:
+
+culori embed
+
+icon embed
+
+text embed
+
+stil embed
+
+animații embed
+
+🌐 Totul configurabil din site-ul tău oficial
+Site-ul tău va avea pagini:
+
+🔥 1. Moderare
+AutoMod
+
+Anti‑Raid
+
+Anti‑Spam
+
+Anti‑Flood
+
+AI Moderare
+
+Moderare manuală
+
+Permisiuni staff
+
+🕯️ 2. Loguri
+tipuri de loguri
+
+canale loguri
+
+nivel detaliu
+
+stil embed
+
+📂 3. Cazuri
+listă cazuri
+
+dovezi
+
+notițe
+
+status
+
+🔒 4. Audit
+acțiuni staff
+
+acțiuni bot
+
+modificări
+
+🧱 5. Config Bot
+prefix
+
+permisiuni
+
+module active

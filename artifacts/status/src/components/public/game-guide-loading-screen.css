@@ -1,0 +1,196 @@
+.game-guide-loading {
+  --guide-loading-bg: #0a0707;
+  --guide-loading-card: #150c0d;
+  --guide-loading-border: rgba(220, 90, 100, 0.18);
+  --guide-loading-fg: #f2eceb;
+  --guide-loading-muted: #a89a99;
+  --guide-loading-accent: #d9505f;
+  --guide-loading-accent-dark: #7a2530;
+
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding:
+    max(1.25rem, env(safe-area-inset-top, 0px))
+    max(1.25rem, env(safe-area-inset-right, 0px))
+    max(1.25rem, env(safe-area-inset-bottom, 0px))
+    max(1.25rem, env(safe-area-inset-left, 0px));
+  background:
+    radial-gradient(circle at 20% 15%, rgba(217, 80, 95, 0.1), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(217, 80, 95, 0.08), transparent 40%),
+    var(--guide-loading-bg);
+  color: var(--guide-loading-fg);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.game-guide-loading__card {
+  display: flex;
+  width: min(100%, 340px);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 36px 32px;
+  border: 1px solid var(--guide-loading-border);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--guide-loading-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.game-guide-loading__icon {
+  position: relative;
+  display: flex;
+  width: 76px;
+  height: 76px;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-guide-loading__glow {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 80, 95, 0.35), transparent 70%);
+  filter: blur(3px);
+  animation: game-guide-loading-pulse 2s ease-in-out infinite;
+}
+
+.game-guide-loading__ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: var(--guide-loading-accent);
+  border-right-color: var(--guide-loading-accent-dark);
+  border-radius: 50%;
+  animation: game-guide-loading-spin 1.3s linear infinite;
+}
+
+.game-guide-loading__icon svg {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 6px rgba(217, 80, 95, 0.55));
+  animation: game-guide-loading-breathe 2s ease-in-out infinite;
+}
+
+.game-guide-loading__title {
+  margin: 0;
+  color: var(--guide-loading-fg);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.game-guide-loading__bar {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.game-guide-loading__bar span {
+  display: block;
+  width: 35%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--guide-loading-accent-dark), var(--guide-loading-accent));
+  animation: game-guide-loading-slide 1.3s ease-in-out infinite;
+}
+
+.game-guide-loading__label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+  color: var(--guide-loading-muted);
+  font-size: 13px;
+}
+
+.game-guide-loading__dots {
+  display: inline-flex;
+}
+
+.game-guide-loading__dots span {
+  opacity: 0;
+  animation: game-guide-loading-blink 1.4s infinite;
+}
+
+.game-guide-loading__dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.game-guide-loading__dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes game-guide-loading-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes game-guide-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes game-guide-loading-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes game-guide-loading-blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes game-guide-loading-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-guide-loading__glow,
+  .game-guide-loading__ring,
+  .game-guide-loading__icon svg,
+  .game-guide-loading__bar span,
+  .game-guide-loading__dots span {
+    animation: none;
+  }
+
+  .game-guide-loading__dots span {
+    opacity: 1;
+  }
+}

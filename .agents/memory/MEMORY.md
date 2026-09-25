@@ -1,0 +1,64 @@
+- [Discord embed images](discord-embed-images.md) — bot serves embed images as static files at /api/assets, referenced by env-derived public URL (not attachments) to avoid per-edit re-upload.
+- [Discord animations](discord-animations.md) — animate via GIFs (ffmpeg eq+sin loop from PNGs; hue lacks eval) or message-edit frames; fireChest needs an internal lock (scheduler + /cufar both call it).
+- [Event participant bonus snapshot](event-participant-bonus-snapshot.md) — combat uses participant stats snapshotted at join; mid-event player-stat changes must be mirrored onto the active participant or they don't apply.
+- [Ash Shield own HP pool](shield-own-hp-pool.md) — shield state lives in TWO places (participant column + boss state map); mechanic changes must hit both.
+- [Boss combat path is separate](boss-combat-path-separate.md) — bosses use handleFinalBoss (not doCombat); crit/effects/reward-mults must be wired in there + both scheduler flee-reward paths or they silently don't apply to bosses.
+- [drizzle push blocked](drizzle-push-blocked.md) — db push is interactive; unrelated destructive drift blocks it. Apply additive columns via ALTER TABLE ... ADD COLUMN IF NOT EXISTS + edit schema file.
+- [Publish DB diff drops prod columns](publish-db-diff-drops-prod-columns.md) — publish diffs the dev DATABASE vs prod; prod-only columns get dropped (prestige wipe). Always push-force dev DB after schema changes.
+- [Final boss reward auth](final-boss-auth.md) — reward buttons tied to an event must re-check active+not-expired+participant+isAlive server-side; stale button messages otherwise let non-eligible users claim.
+- [Drizzle tx return commits](drizzle-tx-return-commits.md) — returning null from db.transaction COMMITS; guard failures must throw a sentinel to roll back earlier deductions.
+- [Escalating upgrade guard](escalating-upgrade-guard.md) — tier-priced upgrades must guard UPDATE...WHERE on expectedLevel, not just balance, or concurrent clicks double-upgrade at the cheap tier.
+- [undici discord.js compat](undici-discordjs-compat.md) — pin undici override to ^6.x (not >=6.27.0); undici 8.x breaks discord.js REST via Symbol(sensitiveHeaders) in Headers ctor.
+- [Discord interaction defer](discord-interaction-defer.md) — handlers doing DB/network work must deferReply/deferUpdate first or prod DB latency causes 10062; bot is prod-only so it's invisible in dev.
+- [Discord dispatcher must be fire-and-forget](discord-dispatcher-pattern.md) — interactionCreate must dispatch handlers with void, not await; sequential await causes 10062 under concurrent clicks.
+- [api-server is /api-only](api-server-is-api-only.md) — don't serve the status SPA from api-server; status is a separate web artifact on "/", else GET /api 500s via a broken catch-all.
+- [Discord embed field markdown](discord-embed-field-markdown.md) — embed field NAMES render markdown literally (raw `**`); use plain dividers there, keep bold for description/value only.
+- [Delayed window.open popup-block](delayed-window-open-popup-block.md) — click→animate→open: open about:blank synchronously on click (opener=null, no noopener flag), set location after delay.
+- [Locked chest race guard](locked-chest-race-guard.md) — consumePlayerKey is atomic (WHERE key>=1); but two key-holders can both pass claimedChests.has() before either adds — fix: consume first, then check+add to claimedChests, refund on collision.
+- [Oracle AI replies](oracle-ai-replies.md) — Oracle answers mentions/pinging-replies via gpt-5-mini on user's own OPENAI_API_KEY; Discord gives content on mention/ping-reply w/o MessageContent intent, non-ping replies skipped.
+- [Discord bot must deploy as Reserved VM](discord-bot-deploy-vm.md) — Autoscale sleeps the process (gateway drops, scheduler stops) → bot "replies once then dies"; must be Reserved VM (user-only change in Deploy pane).
+- [Duplicate bot instance](duplicate-bot-instance.md) — 40060 at first deferUpdate w/o in-process dup warnings = zombie VM's second gateway session; SIGTERM fast-exit + bot_instance DB marker guard; kill current zombie by stopping deployment.
+- [Privileged intent gating](discord-privileged-intent-gating.md) — gate MessageContent behind an env flag (default off); always request GuildMessages, else a missing portal toggle bricks login (4014, prod-only).
+- [Oracle reply-mode status](oracle-reply-mode-status.md) — healthz exposes oracleReplyMode/Reason from env flag + privilegedIntentFellBack; reflects config intent, not connectivity (live shown separately).
+- [Oracle recovery alert](oracle-recovery-alert.md) — recovery-to-full-mode detection needs an on-disk marker; the in-memory privilegedIntentFellBack flag resets on the restart that IS the recovery path.
+- [Oracle swear/insult matching](oracle-swear-matching.md) — auto-mute guard uses prefix-stem matching (\bstem) to catch Romanian vocative forms; short collision words stay whole-word; separate from isToxic mood list.
+- [Oracle toxicity guard](oracle-guard.md) — ModerateMembers permission + bot role above target required for timeout to land; without it Oracle still posts the warning but can't enforce silence.
+- [Oracle guard relationship accounting](oracle-guard.md) — direct toxic messages are intercepted before Oracle chat, so they must still apply exactly one negative relationship change.
+- [Oracle relationship bounds](oracle-relationship-bounds.md) — negative relationship is intentionally unbounded; positive relationship remains capped at +100.
+- [Vitest discord.js mock pattern](vitest-discordjs-mock.md) — mocking discord.js classes (ActionRowBuilder, ButtonBuilder, EmbedBuilder) for scheduler tests requires real class bodies, not arrow-function factories; fake timers need advanceTimersByTimeAsync not runAllTimers for chest expiry.
+- [Discord live countdown](discord-live-countdown.md) — `<t:UNIX:R>` countdown must use a stored absolute expiresAt that ALSO schedules the expiry setTimeout (delay = expiresAt - Date.now()); footers can't render it.
+- [bot_state table self-heal](bot-state-table-self-heal.md) — guard EVERY bot_state helper with singleton ensureBotStateTable() (idempotent CREATE TABLE); ShardReady/ClientReady race a one-shot startup create.
+- [Permanent trader repost guard](permanent-trader-repost-guard.md) — re-post the single persistent trader only on Discord 10008; treating any fetch/edit error as deleted duplicates it on transient blips.
+- [Multi-guild channel routing](multi-guild-channel-routing.md) — getChannel() returns null for unconfigured guilds; scheduler uses fetchChannel(); tests must vi.mock channel-config or actions silently no-op.
+- [Boss fights by rarity](boss-by-rarity.md) — boss check must use stored monsterRarity==="boss" (ambush bosses exist at any level); stat fns need the rarity arg or HP desyncs.
+- [Ephemeral anti-spam pattern](ephemeral-anti-spam.md) — repeated feedback must use ephemeralNote/sendOrEditEphemeral (60s edit window + delete-old); public announcements replace their predecessor under a per-key lock.
+- [DB pool & interaction latency](db-pool-interaction-latency.md) — default pg Pool (max 10) congests the event loop under concurrent clicks, delaying even deferUpdate past 3s → 10062; size pool + timeouts.
+- [Oracle social mood per guild](oracle-social-mood.md) — proactive check-ins and reply sentiment must stay isolated per guild; bot presence reflects the latest derived mood.
+- [Strict Vitest module mocks](strict-vitest-mocks.md) — new optional scheduler exports can break old partial mocks; use local compatibility code or lazy optional lookup.
+- [Discord class images](discord-class-images.md) — map stable internal class keys to sanitized API asset filenames; never use uploaded timestamped filenames directly.
+- [Postgres JSON parameter casts](postgres-json-parameter-casts.md) — placeholders used only inside jsonb_build_object may need explicit ::text casts or pg cannot infer their type.
+- [Artifact production env scope](artifact-production-env-scope.md) — Vite production variables must be explicit in build and/or run env, not only the shared artifact env.
+- [Discord guild count fetch](discord-guild-count-fetch.md) — GuildManager.fetch returns the gateway cache unless force=true; cached guilds can have null approximate member/presence counts.
+- [Invite attribution certainty](invite-attribution-certainty.md) — per-member invite logs must mark concurrent mixed-code joins unknown; Discord exposes invite-use deltas, not each member's invite.
+- [Discord member list REST](discord-member-list-rest.md) — full guild member listings should use paginated REST, not gateway fetches that can hit opcode 8 rate limits.
+- [Discord ticket menu flow](discord-ticket-modal-flow.md) — ticket intake uses one dropdown question at a time, preserving all fields while avoiding Discord's five-row modal limit.
+- [Game pause gate](game-pause-gate.md) — stopping a guild must guard both scheduler entry points and user interactions; independent timers such as Tribute need their own pause state.
+- [Persistent cleanup and equipment rewards](event-cleanup-and-rewards.md) — rehydrate expiry timers after restart and write coupled equipment reward state atomically.
+- [Community vote settlement](community-vote-settlement.md) — closed votes with unfinished rewards must be retried after restart and publish an explicit beneficiary summary.
+- [Moderation safety](moderation-safety-boundaries.md) — Discord identity is authoritative; moderation stays independent of RPG pause and never sanctions an unverified actor.
+- [Protected panel verification](protected-panel-verification.md) — login screenshots miss authenticated routing and shared guild-state failures; test the real menu and mutations with two guilds.
+- [Public mobile navigation](public-mobile-navigation.md) — visibility alone misses blocked links; test actual menu clicks and document width, not just screenshots.
+- [Owner gameplay configuration hydration](gameplay-config-hydration.md) — hydrate persisted per-guild gameplay settings before bot or owner-panel reads to avoid transient defaults.
+- [Ticket media storage](ticket-media-storage.md) — issue owner-protected presigned uploads, then serve saved object paths publicly so Discord can fetch them.
+- [Alliance announcement templates](alliance-announcement-templates.md) — public partnership text supports placeholders and invite counts are snapshotted when staff publishes.
+- [Discord OAuth environments](discord-oauth-environments.md) — moderation login needs a separate development callback URI; production OAuth configuration does not automatically reach preview.
+- [Multi-artifact deployment startup](multi-artifact-deployment-startup.md) — a VM deployment with multiple runnable artifacts can emit transient 500 healthchecks until every configured port is open.
+- [Moderation config ETag retries](moderation-config-etag-retry.md) — protection saves must refetch and reapply the user's change after a stale-version conflict.
+- [Atomic protection toggles](atomic-protection-toggles.md) — dashboard toggles must mutate one protection key server-side, not PUT a stale full config snapshot.
+- [AOS animation ownership](aos-animation-ownership.md) — elements using data-aos must not also have a competing CSS animation that owns opacity or transform.
+- [Bot-control round trips](bot-control-round-trips.md) — every GET bot-control value must be accepted unchanged by PUT; schedule changes must restart the active guild scheduler.
+- [Provisioning permission language](bot-provisioning-permission-copy.md) — Manage Permissions is not a standalone Discord permission; channel overwrites use Manage Channels and member access is configured per category.
+- [Discord overwrite preservation](discord-acl-preservation.md) — edit only managed permission bits; replacing an overwrite set destroys unrelated server access.
+- [Wouter query navigation](wouter-query-navigation.md) — components tracking query-only tabs need `useSearch`; `useLocation` alone won't refresh active navigation markers.
+- [Moderation threshold compatibility](moderation-threshold-defaults.md) — fill missing rule defaults only when no accepted legacy alias is saved; keep all aliases aligned in the editor.
+- [Discord mobile embed layout](discord-mobile-embed-layout.md) — inline fields stack on phones; avoid code-block/Unicode bars and keep previews mobile-first.

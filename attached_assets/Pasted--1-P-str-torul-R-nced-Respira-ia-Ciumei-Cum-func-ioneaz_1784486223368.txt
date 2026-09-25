@@ -1,0 +1,156 @@
+🦴 1️⃣ Păstrătorul Rânced – Respirația Ciumei
+Cum funcționează:
+
+Creează un nor toxic care durează 3 runde.
+
+Toți jucătorii din nor pierd 5% HP pe rundă și -20% armură.
+
+Dacă rămân în nor 3 runde, primesc „Ciumă” = -10% la toate atacurile timp de 2 runde.
+
+Trigger:  
+Folosește abilitatea când scade sub 70% HP.
+
+Efect secundar:  
+Norul se mută aleator în arenă la fiecare rundă.
+
+💀 2️⃣ Strigoiul Fără Maxilar – Țipătul Golului
+Cum funcționează:
+
+Toți jucătorii sunt forțați să se miște aleator (nu pot ataca) timp de 1 rundă.
+
+Pierd 10% HP din vibrații.
+
+Șansa de 30% să fie „Amuțiți” = nu pot folosi abilități 1 rundă.
+
+Trigger:  
+Folosește abilitatea la fiecare 3 runde.
+
+Efect secundar:  
+Strigoiul primește +20% viteză de atac pentru 1 rundă.
+
+⚔️ 3️⃣ Călăul cu Masca de Fier – Execuția Finală
+Cum funcționează:
+
+Dacă un jucător are sub 30% HP, Călăul îl marchează.
+
+În următoarea rundă, lovește automat cu 200% damage.
+
+Dacă jucătorul supraviețuiește, primește „Traumă” = -50% apărare 2 runde.
+
+Trigger:  
+Automat când detectează o țintă slabă.
+
+Efect secundar:  
+Călăul devine imun la stun în runda execuției.
+
+🩸 4️⃣ Păpușarul de Sânge – Corzi de Carne
+Cum funcționează:
+
+Leagă 2–3 jucători între ei.
+
+Toți împart 50% din damage-ul primit.
+
+Mișcarea lor este redusă cu 40%.
+
+Trigger:  
+Folosește abilitatea când sunt 3+ jucători activi.
+
+Efect secundar:  
+Păpușarul primește +15% lifesteal pe durata firelor.
+
+🎶 5️⃣ Cântărețul de Sub Pământ – Simfonia Fracturii
+Cum funcționează:
+
+Creează 3 unde sonore consecutive.
+
+Fiecare undă provoacă 8% HP damage și poate „fractura solul”.
+
+Solul fracturat explodează după 1 rundă = +12% damage.
+
+Trigger:  
+La fiecare 4 runde.
+
+Efect secundar:  
+Jucătorii dezorientați au -25% precizie 1 rundă.
+
+🔮 6️⃣ Femeia cu Trei Fețe – Schimbarea Destinului
+Cum funcționează:  
+La fiecare 30 secunde / 3 runde, schimbă forma:
+
+Foc: +30% damage, atac de zonă.
+
+Gheață: -40% viteză la jucători, +20% armură.
+
+Umbre: atacuri critice +50%, invizibilitate 1 rundă.
+
+Trigger:  
+Automat, ciclic.
+
+Efect secundar:  
+La schimbare, provoacă un „șoc elemental” = 5% HP tuturor.
+
+👑 7️⃣ Regele Cenușii – Furtuna Cenușii
+Cum funcționează:
+
+Creează o furtună globală 2 runde.
+
+Toți jucătorii primesc lame de cenușă = 6% HP pe rundă.
+
+Regele primește +25% viteză de atac.
+
+Trigger:  
+Când scade sub 50% HP.
+
+Efect secundar:  
+Cenușa reduce vindecarea jucătorilor cu 30%.
+
+🌑 8️⃣ Mama Abisului – Privirea Abisului
+Cum funcționează:
+
+Deschide ochiul central.
+
+Trage o rază pe o linie dreaptă: 25% HP damage instant.
+
+Lasă „Arsura Abisului” = -10% HP timp de 2 runde.
+
+Trigger:  
+Când un jucător stă nemișcat 2 runde.
+
+Efect secundar:  
+Terenul devine corupt = -15% viteză pentru toți.
+
+❤️ 9️⃣ Copilul cu Inima Externă – Pulsul Corupt
+Cum funcționează:
+
+La fiecare 10 secunde / 2 runde, emite un puls.
+
+Pulsul absoarbe 5% HP de la toți jucătorii.
+
+Copilul primește HP absorbit.
+
+Trigger:  
+Automat, periodic.
+
+Efect secundar:  
+Dacă ajunge la 100% HP, pulsul devine dublu.
+
+🌌 🔟 Călătorul dintre Lumi – Fractura Dimensională
+Cum funcționează:
+
+Se divide în 3 forme:
+
+Forma Luminii: atac rapid, damage mic.
+
+Forma Umbrei: damage mare, atac lent.
+
+Forma Haosului: atac aleator, efecte imprevizibile.
+
+Fiecare formă atacă independent 2 runde.
+
+La final, se reunesc și provoacă o explozie = 15% HP.
+
+Trigger:  
+Când scade sub 60% HP.
+
+Efect secundar:  
+Jucătorii primesc „Distorsiune” = abilitățile lor au cooldown +1 rundă.

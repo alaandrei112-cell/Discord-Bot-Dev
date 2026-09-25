@@ -1,0 +1,164 @@
+🏰🔥 REGATUL CENUȘII – CLICK RPG SURVIVAL (VERSIUNEA FINALĂ)
+Document complet + design premium pentru fiecare mesaj
+⚔️ I. START EVENT – ORA UMBRELOR
+text
+⚔️🔥  ORA UMBRELOR A ÎNCEPUT  🔥⚔️
+
+Umbrele se ridică din adâncuri, iar cenușa dansează în aer.
+Regatul Cenușii cheamă luptătorii să își dovedească puterea.
+
+Un val nesfârșit de creaturi se pregătește să vă înfrunte.
+Apasă pe butonul sacru și intră în luptă.
+
+💀 Atenție:
+Moartea în acest event este definitivă.
+Cei căzuți în Umbre nu mai pot continua până la următoarea chemare.
+🧟 II. MONȘTRI INFINIȚI – UMBRE FĂRĂ SFÂRȘIT
+Sistem:
+Nivelul monstrului crește la infinit: 1, 2, 3… 100… 500… 1000…
+
+Fiecare nivel crește HP, damage și hit chance.
+
+Fiecare monstru are un nume generat dinamic.
+
+Formule:
+HP: 40 + (nivel × 15)
+
+Damage: 5 + (nivel × 1.5)
+
+Hit chance: 35% + (nivel × 1.2%) (max 90%)
+
+Reward: XP = nivel × 10, Oboli = nivel × 3
+
+🟥 III. MESAJ MONSTRU – DESIGN PREMIUM
+text
+👁️  MONSTRU NIVEL {X} – {Nume Monstru}
+
+Umbrele se contorsionează și dau naștere unei noi ființe.
+Cu fiecare nivel, puterea ei crește, iar speranța se stinge.
+
+❤️ HP: {hp}
+⚔️ Damage: {min_damage} – {max_damage}
+🎯 Șansă de lovitură: {hit_chance}%
+💰 Reward: {xp} XP, {oboli} Oboli de Cenușă
+
+Apasă [Atacă] și vezi dacă destinul îți zâmbește
+sau dacă Umbrele îți vor șopti numele printre cei căzuți.
+🟣 IV. ATAC – SCHIMB DE LOVITURI
+text
+⚔️  AI LOVIT MONSTRUL!
+
+Lovitura ta a atins creatura pentru {player_damage} damage.
+Umbrele se clatină în jurul ei.
+
+💀  MONSTRUL RIPOSTEAZĂ!
+
+Creatura îți aplică {monster_damage} damage.
+Umbrele îți apasă umerii, iar sângele îți pulsează în tâmple.
+
+❤️ HP-ul tău: {player_hp}
+💢 HP-ul monstrului: {monster_hp}
+
+Continuă să lovești sau lasă Umbrele să decidă sfârșitul.
+⚫ V. MOARTE – CĂZUT ÎN UMBRE
+text
+💀  AI CĂZUT ÎN UMBRE 💀
+
+Umbrele te-au revendicat, iar cenușa îți acoperă pașii.
+Nu mai poți continua acest event.
+
+Trupul tău pământesc a cedat,
+dar numele tău va rămâne scris în cronica celor căzuți.
+
+Așteaptă următoarea chemare a Regatului Cenușii.
+🛒 VI. SHOP – FORJA CENUȘII (PREȚURI CARE CRESC)
+Monedă: Oboli de Cenușă
+Prețurile cresc cu 35% la fiecare cumpărare.
+🟡 DESIGN SHOP
+text
+🔥🏺  FORJA CENUȘII – MAGAZINUL REGAL  🏺🔥
+
+În adâncul cetății, focul nu se stinge niciodată.
+Aici, metalul se topește, umbrele se împletesc,
+iar puterea se cumpără cu Oboli de Cenușă.
+
+Oboli disponibili: {oboli}
+
+⚔️  Furia Cenușii (Atac)
+Cost: {cost_atac} Oboli
+→ Îți întărește loviturile și lasă urme adânci în Umbre.
+
+🛡️  Scutul Umbrelor (Defensivă)
+Cost: {cost_def} Oboli
+→ Îți îmbracă trupul într-un val de întuneric protector.
+
+🌀  Dansul Fumului (Evitare)
+Cost: {cost_evitare} Oboli
+→ Umbrele te feresc de loviturile dușmanilor.
+
+💥  Lovitura Arhontei (Critic)
+Cost: {cost_crit} Oboli
+→ O singură lovitură poate schimba soarta luptei.
+
+❤️  Voința Cenușii (HP Max)
+Cost: {cost_hp} Oboli
+→ Îți întărește trupul împotriva Umbrelor.
+
+Alege cu înțelepciune.
+Fiecare Obol cheltuit îți apropie destinul de victorie… sau de ruină.
+✨ VII. LEVEL-UP SPECIAL – DARUL CENUȘII
+text
+✨  AI AVANSAT LA NIVELUL {lvl}  ✨
+
+Cenușa se ridică în jurul tău, iar Umbrele îți recunosc puterea.
+Regatul Cenușii îți oferă un dar pentru progresul tău.
+
+Alege un bonus special:
+
+🔹 +5% XP permanent  
+🔹 +3% șansă de evitare  
+🔹 +2 damage permanent  
+🔹 +5 HP permanent  
+🔹 +1% șansă critică  
+
+Fiecare alegere îți schimbă destinul.
+Umbrele privesc… și judecă.
+🏆 VIII. FINAL EVENT – CRONICA SUPRAVIEȚUITORILOR
+text
+🏆📜  CRONICA SUPRAVIEȚUITORILOR  📜🏆
+
+Eventul s-a încheiat.
+Umbrele se retrag, iar cenușa cade încet peste Regat.
+
+Eroii care au rezistat cel mai mult:
+
+{top_1}
+{top_2}
+{top_3}
+
+Cei Căzuți în Umbre:
+
+{fallen_1}
+{fallen_2}
+{fallen_3}
+
+Recompensele au fost trimise:
+→ XP în funcție de nivelul maxim de monstru atins
+→ Oboli de Cenușă în funcție de damage total
+
+Regatul Cenușii își amintește de fiecare pas,
+de fiecare lovitură și de fiecare cădere.
+Umbrele îți mulțumesc pentru luptă.
+🌀 IX. ANUNȚ EVENIMENT – DECRET AL CURȚII CENUȘII
+text
+⚔️📜  DECRET AL CURȚII CENUȘII  📜⚔️
+
+Umbrele s-au mișcat, iar cenușa s-a ridicat din adâncuri.
+Un nou eveniment a fost declanșat în Regat.
+
+Verifică sanctuarul umbrelor:
+👉 #evenimente
+
+Acolo începe lupta.
+Acolo se scrie destinul.
+Acolo se ridică eroii… și cad cei 

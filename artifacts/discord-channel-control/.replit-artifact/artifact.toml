@@ -1,0 +1,19 @@
+kind = "web"
+previewPath = "/discord-channel-control/"
+title = "Control Bot Discord — Canale"
+description = "Panou standalone pentru configurarea canalelor Discord și a categoriilor create de bot. Include selecții de canale, ID-uri, permisiuni pe roluri, validare, salvare locală și testarea fluxului fără a necesita autentificare Discord."
+version = "1.0.0"
+id = "artifacts/discord-channel-control"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/discord-channel-control/" ]
+localPort = 21520
+
+[services.development]
+run = "pnpm --filter @workspace/discord-channel-control run dev"
+
+[services.env]
+PORT = "21520"
+BASE_PATH = "/discord-channel-control/"

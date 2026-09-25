@@ -1,0 +1,531 @@
+uploads = []
+
+[[generated]]
+id = "qprPCRtWf-arOyHGGUKfq"
+uri = "file://artifacts/api-server/assets/monster.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "xzD7_fF4m0YB9ZnWeH1Wp"
+uri = "file://artifacts/api-server/assets/chest.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "fzoCuuFPKSyumS897e3Ee"
+uri = "file://artifacts/api-server/assets/death.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "l0f9OxBQYie3tqDuN0kG5"
+uri = "file://artifacts/api-server/assets/companion_lup.png"
+type = "image"
+title = "ash wolf companion"
+
+[[generated]]
+id = "pvNRkmgkoOxrDEF9goEWY"
+uri = "file://artifacts/api-server/assets/companion_lup_evo.png"
+type = "image"
+title = "evolved ash wolf"
+
+[[generated]]
+id = "ADv__2D07vST91dcWCAHw"
+uri = "file://artifacts/api-server/assets/companion_corb.png"
+type = "image"
+title = "shadow raven companion"
+
+[[generated]]
+id = "mGzuruWgXKqnnK0CStaOt"
+uri = "file://artifacts/api-server/assets/companion_corb_evo.png"
+type = "image"
+title = "evolved shadow raven"
+
+[[generated]]
+id = "SHTfaerxEa9RpelM8cGbD"
+uri = "file://artifacts/api-server/assets/companion_spirit.png"
+type = "image"
+title = "extinguished spirit companion"
+
+[[generated]]
+id = "FXNpZ9TzA5ORBi_wpilGS"
+uri = "file://artifacts/api-server/assets/companion_spirit_evo.png"
+type = "image"
+title = "evolved ash spirit"
+
+[[generated]]
+id = "M-4tOhVLtFV46A_LSbCq9"
+uri = "file://artifacts/api-server/assets/companion_golem.png"
+type = "image"
+title = "smoke golem companion"
+
+[[generated]]
+id = "D4D1jC40wwaKrgILWXlrz"
+uri = "file://artifacts/api-server/assets/companion_golem_evo.png"
+type = "image"
+title = "evolved magma golem"
+
+[[generated]]
+id = "cyjQqGhTKiNvyaGAUhgR4"
+uri = "file://artifacts/api-server/assets/chest_bronz.png"
+type = "image"
+title = "bronze chest"
+
+[[generated]]
+id = "vlxzBMSc6WdiGamu46d41"
+uri = "file://artifacts/api-server/assets/chest_argint.png"
+type = "image"
+title = "silver chest"
+
+[[generated]]
+id = "AZ44ZJjWSTbyjRUhYaCkw"
+uri = "file://artifacts/api-server/assets/chest_aur.png"
+type = "image"
+title = "gold chest"
+
+[[generated]]
+id = "0fwV-2CN1MQzYeKJ-g9K9"
+uri = "file://artifacts/api-server/assets/chest_mitic.png"
+type = "image"
+title = "mythic chest"
+
+[[generated]]
+id = "Fa_2JCHanwrLm-uLcK9rA"
+uri = "file://artifacts/status/public/map-bg.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "27qccNQLj_UmpYnIfyW6a"
+uri = "file://artifacts/api-server/assets/chest_regal.png"
+type = "image"
+title = "regal chest dark fantasy"
+
+[[generated]]
+id = "q_5lOfpn9Kew6_eu8oU2H"
+uri = "file://artifacts/api-server/assets/key_rar.png"
+type = "image"
+title = "silver rare key glow"
+
+[[generated]]
+id = "5hWMmIKtRpFh4ybD3DLil"
+uri = "file://artifacts/api-server/assets/key_epic.png"
+type = "image"
+title = "epic purple gold key"
+
+[[generated]]
+id = "T1Ov-pFwcacGPRVg8jReY"
+uri = "file://artifacts/api-server/assets/key_regal.png"
+type = "image"
+title = "royal blue gold key"
+
+[[generated]]
+id = "gOFwNU1dKi0abVuZAWNbs"
+uri = "file://artifacts/api-server/assets/trader.png"
+type = "image"
+title = "ash merchant trader"
+
+[[generated]]
+id = "jqiu1DW1t_XlXbphf2XC7"
+uri = "file://artifacts/api-server/assets/shop.png"
+type = "image"
+title = "ash royal forge shop"
+
+[[generated]]
+id = "2NckFNm-ZCuoy13DUl5Wx"
+uri = "file://artifacts/api-server/assets/dragon.png"
+type = "image"
+title = "ash dragon boss"
+
+[[outputs]]
+id = "Xv7osCIljB2ivkCRjsX9M"
+uri = "file://artifacts/api-server/assets/chest_bronz.png"
+type = "image"
+title = "🪙 Cufăr de Bronz"
+logical_id = "0fddf0cf-bfaf-4d29-b009-00d38ab42852"
+
+[[outputs]]
+id = "05f3HSBTGKSDOdJfd2T3P"
+uri = "file://artifacts/api-server/assets/chest_argint.png"
+type = "image"
+title = "🥈 Cufăr de Argint"
+logical_id = "d036c447-5e9f-4089-95d7-c7daea58b951"
+
+[[outputs]]
+id = "lChn_ymS3qBF0tajPx6C5"
+uri = "file://artifacts/api-server/assets/chest_aur.png"
+type = "image"
+title = "🥇 Cufăr de Aur"
+logical_id = "6fdbf0f6-1c26-4aff-b234-ee36cd334f05"
+
+[[outputs]]
+id = "RSCyyL58lsV6Gdx4GOALT"
+uri = "file://artifacts/api-server/assets/chest_mitic.png"
+type = "image"
+title = "💎 Cufăr Mitic"
+logical_id = "6af8160f-e400-400b-9cfb-b954310ae5aa"
+
+[[outputs]]
+id = "qTFGLqKIcc3xWRYWlt3RT"
+uri = "file://attached_assets/generated_images/personal.png"
+type = "image"
+title = "Cufărul Vegherii Zilnice"
+description = "Imaginea folosită în embed-ul Discord pentru Cufărul Vegherii Zilnice."
+logical_id = "5b02758b-15e5-40b7-90cd-2c381ec8a692"
+content_hash = "sha256:36f9097c211e94780b3ce00750f85b2965a7411659f4f85aebdde0aa7917172d"
+size = 1468099
+mtime_ms = 1788284583220
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/5b02758b-15e5-40b7-90cd-2c381ec8a692/e9a0c816-9f6c-4c05-ba22-dc4f356eb042"
+storage_version_token = "1788285463205239"
+content_type = "image/png"
+
+[[outputs]]
+id = "RdIOparbr71lUqfZMizhi"
+uri = "file://attached_assets/generated_images/fratie.png"
+type = "image"
+title = "Chivotul Frăției"
+description = "Imaginea folosită în embed-ul Discord pentru Chivotul Frăției."
+logical_id = "33c776a8-44e9-41ab-b642-113710cf2f5d"
+content_hash = "sha256:1d0226da9a6b86283b5b7f93301714249ebdf2fc1fc29264e9c583f319e05e30"
+size = 1456327
+mtime_ms = 1788284582076
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/33c776a8-44e9-41ab-b642-113710cf2f5d/cbc84607-0157-462a-99f6-9d95e0269a61"
+storage_version_token = "1788285464105105"
+content_type = "image/png"
+
+[[outputs]]
+id = "M5U8ywuypUUPVNwnB5I-m"
+uri = "file://attached_assets/generated_images/cheie_pangarita.png"
+type = "image"
+title = "Cheia Pângărită"
+description = "Imaginea folosită în embed-ul Discord pentru Cheia Pângărită."
+logical_id = "74f04bf6-d0a8-4735-8880-433d8f18c847"
+content_hash = "sha256:7356bb94252870ab968c0991ff2becbd4978e7e134c6610eda31726f1aefc4ad"
+size = 1262127
+mtime_ms = 1788284578496
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/74f04bf6-d0a8-4735-8880-433d8f18c847/d7a4ae11-1226-4e49-89e9-f35ad3456dca"
+storage_version_token = "1788285464887291"
+content_type = "image/png"
+
+[[outputs]]
+id = "8gI3Vd1annASqimsU6MMr"
+uri = "file://attached_assets/generated_images/eclipsa_neagra.png"
+type = "image"
+title = "Cufărul Eclipsei Negre"
+description = "Imaginea folosită în embed-ul Discord pentru Cufărul Eclipsei Negre."
+logical_id = "a62b1d30-4c15-46f0-97a1-893d816408a9"
+content_hash = "sha256:43e2486f56e44fe323dadbc42e59c6328706ce9964ae0405a93ff6ec421b4e97"
+size = 1863527
+mtime_ms = 1788284578572
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/a62b1d30-4c15-46f0-97a1-893d816408a9/09eff6d6-2276-423a-aac2-d91bdd840f6b"
+storage_version_token = "1788285465805722"
+content_type = "image/png"
+
+[[outputs]]
+id = "U4B9SmIhFAbDAi7xDHUCh"
+uri = "file://attached_assets/generated_images/regina_moarta.png"
+type = "image"
+title = "Sicriul Reginei Moarte"
+description = "Imaginea folosită în embed-ul Discord pentru Sicriul Reginei Moarte."
+logical_id = "b52c0e1f-af10-4881-a7f4-1de809b97dd2"
+content_hash = "sha256:3ff6f192523a9602a8bdb7596811a53c9e75a9e0b47f0cb2fbf2effc3523fa94"
+size = 1748877
+mtime_ms = 1788284580040
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/b52c0e1f-af10-4881-a7f4-1de809b97dd2/eca02859-fcf7-4d73-8f41-cff14dbdab26"
+storage_version_token = "1788285466627736"
+content_type = "image/png"
+
+[[outputs]]
+id = "bUGqF5gJRjc8Nq-jPnSo9"
+uri = "file://attached_assets/generated_images/solstitiul_sangeros.png"
+type = "image"
+title = "Chivotul Solstițiului Sângeros"
+description = "Imaginea folosită în embed-ul Discord pentru Chivotul Solstițiului Sângeros."
+logical_id = "c5d8b5a1-56a7-4be9-82ad-d528fdd6e868"
+content_hash = "sha256:dd3aff1b7ab24a1a4fe0fd592aa614bd6e4df607abfcb382a79aa5fcea45aa18"
+size = 1637871
+mtime_ms = 1788284579748
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/c5d8b5a1-56a7-4be9-82ad-d528fdd6e868/ef079a3a-ddfe-4ca6-81c2-4d0c68fdba45"
+storage_version_token = "1788285467438068"
+content_type = "image/png"
+
+[[outputs]]
+id = "VZSdsPeYdzaOZmZcxmoBL"
+uri = "file://attached_assets/generated_images/carnavalul_funebru.png"
+type = "image"
+title = "Cufărul Carnavalului Funebru"
+description = "Imaginea folosită în embed-ul Discord pentru Cufărul Carnavalului Funebru."
+logical_id = "8c7f69ce-cebb-41b6-88a0-130e916faed1"
+content_hash = "sha256:c80e4f0625eadc5ef5153d2e51ab7b156b432553c0d73a1a12b44d4fc62bf16e"
+size = 1668424
+mtime_ms = 1788284578732
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/8c7f69ce-cebb-41b6-88a0-130e916faed1/5665dda3-6831-4c20-a59a-1aeb1d31e8d2"
+storage_version_token = "1788285468259237"
+content_type = "image/png"
+
+[[outputs]]
+id = "59D2z7RY0PvBO9GzfVsxf"
+uri = "file://attached_assets/generated_images/targul_negru.png"
+type = "image"
+title = "Târgul Negru"
+description = "Imaginea folosită în embed-ul Discord pentru Târgul Negru."
+logical_id = "289c8277-06aa-4335-82dd-9209c91c2671"
+content_hash = "sha256:47c3509b5937319b8e5464152d6e36b6d77339d2112aa8a3d94f6c53975256f2"
+size = 1759102
+mtime_ms = 1788284583684
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/289c8277-06aa-4335-82dd-9209c91c2671/9e5711a9-c510-45e5-88d8-1b197cf95e14"
+storage_version_token = "1788285469139057"
+content_type = "image/png"
+
+[[outputs]]
+id = "dPGnHEPHUGRRhBggt_4JI"
+uri = "file://attached_assets/generated_images/soaptele_oracolului.png"
+type = "image"
+title = "Cufărul Șoaptelor Oracolului"
+description = "Imaginea folosită în embed-ul Discord pentru Cufărul Șoaptelor Oracolului."
+logical_id = "4b4a374f-9e64-4fab-99ea-07201dbefce8"
+content_hash = "sha256:d005ce1b94534a3224e6f7c0bac0671f667bc4c0d715f3f37c3692ca54d24fc7"
+size = 1603218
+mtime_ms = 1788284580456
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/4b4a374f-9e64-4fab-99ea-07201dbefce8/4d1ce71d-4f4f-4456-8209-cca326482af5"
+storage_version_token = "1788285469874153"
+content_type = "image/png"
+
+[[outputs]]
+id = "XViP7KrlF2DzdJXLtZ3n3"
+uri = "file://attached_assets/generated_images/key_umbrei_frante.png"
+type = "image"
+title = "Cheia Umbrei Frânte"
+description = "Imaginea folosită pentru Cheia Umbrei Frânte în embed-urile și recompensele Discord."
+logical_id = "2d75c57f-540f-479d-b100-efd5160d2893"
+content_hash = "sha256:ee6d4e8b6ebcc4ee4f1c0a55b468d6822a883fa7339b9d1c757d82a3dd83f4c5"
+size = 1088159
+mtime_ms = 1788283420613
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/2d75c57f-540f-479d-b100-efd5160d2893/5a039a00-c7c9-4fa7-aa5e-30946bd6b1f6"
+storage_version_token = "1788285509711992"
+content_type = "image/png"
+
+[[outputs]]
+id = "bOHWZAZ3GFMxa3Iot6Q6A"
+uri = "file://attached_assets/generated_images/key_cenusii_regale.png"
+type = "image"
+title = "Cheia Cenușii Regale"
+description = "Imaginea folosită pentru Cheia Cenușii Regale în embed-urile și recompensele Discord."
+logical_id = "26a54bc6-91d3-4170-a330-f5d8dee40863"
+content_hash = "sha256:e5ffc1faf0b74bae531a8a4ede45dc782aa10de2b4549969ce44729d300a0cf0"
+size = 1170589
+mtime_ms = 1788283422153
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/26a54bc6-91d3-4170-a330-f5d8dee40863/96bbab03-cfcd-4516-bb37-7b2aee38edbd"
+storage_version_token = "1788285510562719"
+content_type = "image/png"
+
+[[outputs]]
+id = "4gIBuOukQTOaq67cLVHIr"
+uri = "file://attached_assets/generated_images/key_nocturna.png"
+type = "image"
+title = "Cheia Nocturnă"
+description = "Imaginea folosită pentru Cheia Nocturnă în embed-urile și recompensele Discord."
+logical_id = "10bf4285-cb81-4867-9052-5c9d2f9ede9b"
+content_hash = "sha256:7d795b2bf322754f25fa65827b513df659261ea56353d9a2c0e510b0faa0b220"
+size = 875126
+mtime_ms = 1788283421425
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/10bf4285-cb81-4867-9052-5c9d2f9ede9b/09da242b-6238-46e0-b10c-2971a5ebc203"
+storage_version_token = "1788285511403679"
+content_type = "image/png"
+
+[[outputs]]
+id = "BTAijmH0O7mz6by7UTuvI"
+uri = "file://attached_assets/generated_images/key_oaselor_tacute.png"
+type = "image"
+title = "Cheia Oaselor Tăcute"
+description = "Imaginea folosită pentru Cheia Oaselor Tăcute în embed-urile și recompensele Discord."
+logical_id = "0f140d5e-76f6-435e-901d-75f3841ef30f"
+content_hash = "sha256:16458b8f48d498d0fd95708fbe53e41b611395b461a59933655622ff2833616d"
+size = 1090431
+mtime_ms = 1788283418593
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/0f140d5e-76f6-435e-901d-75f3841ef30f/e541642e-41a2-47f1-b27c-488d8a96b3ec"
+storage_version_token = "1788285512229358"
+content_type = "image/png"
+
+[[outputs]]
+id = "uF4YL5TVke3QuKZqAzLLk"
+uri = "file://attached_assets/generated_images/key_fumului_inghetat.png"
+type = "image"
+title = "Cheia Fumului Înghețat"
+description = "Imaginea folosită pentru Cheia Fumului Înghețat în embed-urile și recompensele Discord."
+logical_id = "60bd18e3-f1da-4ad1-affc-0d2934487291"
+content_hash = "sha256:6ec921af463fddea9abdbcd595575193676e9429f64da19e09b230f83fdeb6af"
+size = 1422417
+mtime_ms = 1788283420385
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/60bd18e3-f1da-4ad1-affc-0d2934487291/7dd29a1c-dd06-4274-9cd8-a12a6840f4d7"
+storage_version_token = "1788285512982115"
+content_type = "image/png"
+
+[[outputs]]
+id = "mFkHaoKlqRnfQH5PLY-Mq"
+uri = "file://attached_assets/generated_images/key_cavalerului_cenusi.png"
+type = "image"
+title = "Cheia Cavalerului Cenușii"
+description = "Imaginea folosită pentru Cheia Cavalerului Cenușii în embed-urile și recompensele Discord."
+logical_id = "5dd2dcea-f28d-4de4-88a3-09706c974088"
+content_hash = "sha256:b765db93865c440cc51e492900432f16768cf5f688d3970a700747bc09f2d7bf"
+size = 1170118
+mtime_ms = 1788283419897
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/5dd2dcea-f28d-4de4-88a3-09706c974088/0049d907-9909-4e3e-8ce1-759a83584f54"
+storage_version_token = "1788285513817416"
+content_type = "image/png"
+
+[[outputs]]
+id = "YFGLGcp85_GQKREDSLqnI"
+uri = "file://attached_assets/generated_images/tributul_regatului.png"
+type = "image"
+title = "Imaginea Tributul Regatului"
+description = "Ilustrație gotică fantasy cu altar regal, monede de aur, coroană roșie și cenușă; este folosită în embed-ul Discord al Tributului Regatului."
+logical_id = "716a77fd-ae4c-472b-ac72-6dc6ef451d6d"
+content_hash = "sha256:8020fe9123ce2317d94ac3b4e59bace1c71fee38ee86a5b29f7bd12a273453c6"
+size = 1528184
+mtime_ms = 1788293592505
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/716a77fd-ae4c-472b-ac72-6dc6ef451d6d/f5717982-a98f-4c7b-8757-4e325267da7f"
+storage_version_token = "1788294082032219"
+content_type = "image/png"
+
+[[outputs]]
+id = "HItpRNNfSDDLE1D3jJ6W0"
+uri = "file://attached_assets/generated_images/arma-sabia-regelui.png"
+type = "image"
+title = "Sabia Regelui"
+description = "Weapon - dark fantasy PNG with transparent background."
+logical_id = "66dd3a4e-a903-40f2-afff-d505137d9ce0"
+content_hash = "sha256:6c190cf9c2c0cbed11fa7d95bae5cefb280800f8f00a31ec33bf99fbac36899a"
+size = 1305571
+mtime_ms = 1788365017473
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/66dd3a4e-a903-40f2-afff-d505137d9ce0/695d0faf-8776-4813-8b82-51355cdc2f3d"
+storage_version_token = "1788365063410800"
+content_type = "image/png"
+
+[[outputs]]
+id = "cEQZ8MyhLABSLWOaMekfx"
+uri = "file://attached_assets/generated_images/arma-pumnalul-umbrei.png"
+type = "image"
+title = "Pumnalul Umbrei"
+description = "Weapon - dark fantasy PNG with transparent background."
+logical_id = "eccec09a-c547-4d82-89b7-e07b9a24b55a"
+content_hash = "sha256:d3618646037a4d75be5bb85fb8b4d21c878e2a4df8b0a63c0495c57aba287bdf"
+size = 1144529
+mtime_ms = 1788365027449
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/eccec09a-c547-4d82-89b7-e07b9a24b55a/912cc793-3674-438b-9826-0c27ffb2da63"
+storage_version_token = "1788365064222522"
+content_type = "image/png"
+
+[[outputs]]
+id = "fsAw7fG3ftm5Bw1aurTeq"
+uri = "file://attached_assets/generated_images/arma-ciocanul-de-jar.png"
+type = "image"
+title = "Ciocanul de Jar"
+description = "Weapon - dark fantasy PNG with transparent background."
+logical_id = "1811147f-3998-4444-8e3e-fdec925b0779"
+content_hash = "sha256:c7d29e040d21ba45631c105957812126d7664421c293322420e9649de2e72ad3"
+size = 1374602
+mtime_ms = 1788365017933
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/1811147f-3998-4444-8e3e-fdec925b0779/b54eee4a-5825-4042-864b-01d483905516"
+storage_version_token = "1788365064991563"
+content_type = "image/png"
+
+[[outputs]]
+id = "cc4nzhSylz1VP29ltwk1o"
+uri = "file://attached_assets/generated_images/arma-arcul-vanatorului.png"
+type = "image"
+title = "Arcul Vanatorului"
+description = "Weapon - dark fantasy PNG with transparent background."
+logical_id = "7f7655ee-55c0-4a4a-bbb2-8fb2366c8e69"
+content_hash = "sha256:3237558a951e604e59e7725687c24f30930513b9740088e9faedf78e169ae8be"
+size = 1299522
+mtime_ms = 1788365015989
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/7f7655ee-55c0-4a4a-bbb2-8fb2366c8e69/630ca8b6-c86a-4eff-b5ac-a4f399800bce"
+storage_version_token = "1788365065798432"
+content_type = "image/png"
+
+[[outputs]]
+id = "k9UQJOEyOH4yYxDIjPlHT"
+uri = "file://attached_assets/generated_images/arma-catalizatorul-coroziv.png"
+type = "image"
+title = "Catalizatorul Coroziv"
+description = "Weapon - dark fantasy PNG with transparent background."
+logical_id = "9eb1192c-52ac-4da7-82d2-ef76c08c54c2"
+content_hash = "sha256:9462a4ba18fd885341ca69e6745792ec841d8517a84c8b8ad883f6c4fe0cbc0e"
+size = 1321596
+mtime_ms = 1788365020457
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/9eb1192c-52ac-4da7-82d2-ef76c08c54c2/11e5e3c0-056d-493c-a6c6-b1499c152048"
+storage_version_token = "1788365066666366"
+content_type = "image/png"
+
+[[outputs]]
+id = "8yFLJrFDlM05CeyKy4-Xg"
+uri = "file://attached_assets/generated_images/armura-mantia-fantomei.png"
+type = "image"
+title = "Mantia Fantomei"
+description = "Armor - dark fantasy PNG with transparent background."
+logical_id = "f8b8b4ae-650e-4766-a2c2-f985b6286d4f"
+content_hash = "sha256:1e2256b5590b6de33746aeb918ffc629f786846c34f23425e579df40a0dc2490"
+size = 1480907
+mtime_ms = 1788365019849
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/f8b8b4ae-650e-4766-a2c2-f985b6286d4f/3fbf0f68-2deb-4f5e-b0b1-b419a132b491"
+storage_version_token = "1788365067913189"
+content_type = "image/png"
+
+[[outputs]]
+id = "-bq_mqtJCEfKeVoGNzPyJ"
+uri = "file://attached_assets/generated_images/armura-cuirasa-veghei.png"
+type = "image"
+title = "Cuirasa Veghei"
+description = "Armor - dark fantasy PNG with transparent background."
+logical_id = "bdd173f5-6220-41ad-a6f8-1245cd60cc85"
+content_hash = "sha256:51019714dde0aa7411c9890388c4d73b87237d9ba67c83007bc7617b10e5c228"
+size = 1658508
+mtime_ms = 1788365017053
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/bdd173f5-6220-41ad-a6f8-1245cd60cc85/4992137c-ab02-4939-8c13-65e1300b2b42"
+storage_version_token = "1788365068707342"
+content_type = "image/png"
+
+[[outputs]]
+id = "Y7oh8Bneyh9IfPvsIWMFY"
+uri = "file://attached_assets/generated_images/armura-halatul-reagentului.png"
+type = "image"
+title = "Halatul Reagentului"
+description = "Armor - dark fantasy PNG with transparent background."
+logical_id = "d4d20e4f-f276-4562-abcb-0ad3d90265a7"
+content_hash = "sha256:45f3622c7ead3cf4c61b5f561dd232ff8c32ae7d99e7d9c42e3510fa8d1af645"
+size = 1569252
+mtime_ms = 1788365032133
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/d4d20e4f-f276-4562-abcb-0ad3d90265a7/2d58f261-0e95-435b-ac07-5d1cceb864bf"
+storage_version_token = "1788365069541385"
+content_type = "image/png"
+
+[[outputs]]
+id = "MRQkyojRMWbca77Xc9F3w"
+uri = "file://attached_assets/generated_images/armura-pelerina-de-fum.png"
+type = "image"
+title = "Pelerina de Fum"
+description = "Armor - dark fantasy PNG with transparent background."
+logical_id = "3adcde69-5fde-4d4a-b1e0-eb0661928e5b"
+content_hash = "sha256:6f1387af94bdeaca199faf73d3943143c6f3a0743a889159c8deab64c12f0614"
+size = 1512026
+mtime_ms = 1788365020249
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/3adcde69-5fde-4d4a-b1e0-eb0661928e5b/48dd1ddb-2070-49fc-90a0-49afce745e0e"
+storage_version_token = "1788365070351797"
+content_type = "image/png"
+
+[[outputs]]
+id = "1F98tZOFJ0JRu7gekKo7L"
+uri = "file://attached_assets/generated_images/armura-platosa-cenusie.png"
+type = "image"
+title = "Platoșa Cenușie"
+description = "Armor - dark fantasy PNG with transparent background."
+logical_id = "cb7651b0-577c-4143-81d1-127750eed61a"
+content_hash = "sha256:643f14cb489a8d5631972121ceaf7493d471f56b6c53460fe0d0889f9cc6bc01"
+size = 1856807
+mtime_ms = 1788365020573
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c6624cc8-e264-47e4-8a83-82fc52f0aaa6/cb7651b0-577c-4143-81d1-127750eed61a/2a1f6c18-49c7-4cb0-9751-40e2f6a1f9f7"
+storage_version_token = "1788365083074069"
+content_type = "image/png"

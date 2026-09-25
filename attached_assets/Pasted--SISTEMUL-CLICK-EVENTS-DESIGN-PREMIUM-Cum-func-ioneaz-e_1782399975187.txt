@@ -1,0 +1,139 @@
+🗡️ SISTEMUL „CLICK‑EVENTS” – DESIGN PREMIUM
+🔥 Cum funcționează evenimentul
+Botul pornește automat un eveniment random.
+
+Evenimentul durează 1 oră.
+
+În acea oră, membrii pot apăsa butoanele pentru a primi XP, loot, reputație etc.
+
+După ce expiră, dispare și următorul apare random.
+
+🧱 DESIGN TOP (embed + text + butoane)
+Ți-l dau pentru fiecare tip de event.
+
+🟫 A. LOOT DROP – „Cufărul Cenușii”
+Titlu:  
+🎁 Cufărul Cenușii a fost găsit!
+
+Descriere:  
+O cutie veche, acoperită de cenușă fierbinte, se materializează în fața ta.
+Se spune că doar cei curajoși o pot deschide fără să fie arși…
+
+Buton:  
+[ Deschide Cufărul ]
+
+Recompense posibile:
+
+XP
+
+Aur
+
+Item comun / rar
+
+1% șansă la Item Legendar
+
+Footer:  
+⏳ Eveniment activ timp de 1 oră.
+
+🟪 B. ENCOUNTER – „Creatura Umbrelor”
+Titlu:  
+👁️ O Creatură din Umbre te atacă!
+
+Descriere:  
+Din întunericul dens, o siluetă se desprinde și se aruncă spre tine.
+Umbrele șoptesc numele tău… vei riposta?
+
+Buton:  
+[ Atacă ]
+
+Rezultate posibile:
+
++XP
+
++Reputație
+
+-HP
+
+Critic: Creatura fuge și lasă loot
+
+Footer:  
+⏳ Eveniment activ timp de 1 oră.
+
+🟦 C. QUEST RAPID – „Străjerul Rănit”
+Titlu:  
+🛡️ Ajută Străjerul Rănit
+
+Descriere:  
+Un străjer al Regatului, acoperit de cenușă și sânge, îți cere ajutorul.
+Poți interveni sau îl poți lăsa pradă Umbrelor…
+
+Buton:  
+[ Ajută ]
+
+Recompense:
+
++Reputație
+
++XP
+
++Mic loot
+
+Șansă mică la Binecuvântare
+
+Footer:  
+⏳ Eveniment activ timp de 1 oră.
+
+🟧 D. RITUAL – „Chemarea Cenușii”
+Titlu:  
+🔥 Ritualul Cenușii se Deschide
+
+Descriere:  
+Cenușa se ridică în spirale, formând simboluri vechi.
+Umbrele îți oferă o alegere… dar prețul poate fi mare.
+
+Buton:  
+[ Invocă ]
+
+Efecte posibile:
+
+Binecuvântare
+
+Blestem
+
+Cenușă Sacră
+
+Item rar
+
+Eveniment special (ex: portal)
+
+Footer:  
+⏳ Eveniment activ timp de 1 oră.
+
+🎨 DESIGN GENERAL (stil Regatul Cenușii)
+Culori recomandate pentru embed:
+Fundal: #1A1A1A
+
+Accent: #8A4A2F (culoare de cenușă arsă)
+
+Titluri: #C9A27E (aur vechi)
+
+Detalii: #5C3B2E (lemn ars)
+
+Emoji-uri tematice:
+🔥 🗡️ 🛡️ 👁️ 🕯️ 🐺 🩸 🪙 🎁
+
+Font vibe:
+Scurt, cinematic, misterios.
+
+⏳ Cum să apară random
+Poți seta:
+
+Cooldown între 2–4 ore
+
+Botul alege random 1 din cele 4 evenimente
+
+Postează embed-ul + buton
+
+Evenimentul se auto-șterge după 1 oră
+
+Recompensele se acordă instant la click

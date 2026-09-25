@@ -1,0 +1,44 @@
+kind = "web"
+previewPath = "/"
+title = "Oracolul Cenușii — Status"
+version = "1.0.0"
+id = "artifacts/status"
+router = "path"
+deploymentTarget = "vm"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = ["/"]
+localPort = 25104
+
+[services.development]
+run = "pnpm --filter @workspace/status run dev"
+
+[services.production]
+
+[services.production.build]
+args = ["pnpm", "--filter", "@workspace/status", "run", "build"]
+
+[services.production.build.env]
+NODE_ENV = "production"
+PORT = "25104"
+BASE_PATH = "/"
+
+[services.production.run]
+args = ["sh", "-c", "pnpm --filter @workspace/status run serve"]
+
+[services.production.run.env]
+PORT = "25104"
+NODE_ENV = "production"
+BASE_PATH = "/"
+
+[services.production.health.startup]
+path = "/"
+
+[services.env]
+PORT = "25104"
+BASE_PATH = "/"

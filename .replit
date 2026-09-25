@@ -1,0 +1,93 @@
+modules = ["nodejs-24", "python-3.11", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "gce"
+ignorePorts = false
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "test"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "typecheck"
+
+[[workflows.workflow]]
+name = "test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run test"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[[workflows.workflow]]
+name = "typecheck"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run typecheck"
+
+[workflows.workflow.metadata]
+isValidation = true
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+ORACLE_MESSAGE_CONTENT_ENABLED = "true"
+ORACLE_OWNER_ID = "585841275765522442"
+DISCORD_PRIVILEGED_INTENTS_ENABLED = "true"
+
+[userenv.production]
+DISCORD_OAUTH_REDIRECT_URI = "https://discord-bot-dev-alaandrei09.replit.app/api/moderation/oauth/discord/callback"
+MODERATION_WEB_ORIGIN = "https://discord-bot-dev-alaandrei09.replit.app"
+
+[userenv.development]
+DISCORD_OAUTH_REDIRECT_URI = "https://c6624cc8-e264-47e4-8a83-82fc52f0aaa6-00-3dpwd4oq8kbi3.picard.replit.dev/api/moderation/oauth/discord/callback"
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 8082
+externalPort = 3002
+
+[[ports]]
+localPort = 21520
+externalPort = 3001
+
+[[ports]]
+localPort = 25104
+externalPort = 3000

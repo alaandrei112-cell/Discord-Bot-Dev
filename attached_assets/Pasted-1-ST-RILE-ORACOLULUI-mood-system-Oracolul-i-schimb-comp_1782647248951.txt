@@ -1,0 +1,294 @@
+1. STĂRILE ORACOLULUI (mood system)
+Oracolul își schimbă comportamentul în funcție de activitatea serverului.
+
+Calm – activitate normală
+
+Agitat – activitate mare
+
+Somnoros – server mort
+
+Iritat – toxicitate
+
+Furios – spam / conflicte
+
+Extatic – evenimente mari
+
+Confuz – activitate haotică
+
+Tăcut – perioade lungi fără mesaje
+
+🔥 2. 50 MESAGE PENTRU FIECARE STARE
+Calm (7 mesaje)
+„Cenușa respiră liniștit… echilibrul e stabil.”
+
+„Oracolul observă în tăcere.”
+
+„Regatul se mișcă într-un ritm blând.”
+
+„Umbrele privesc, dar nu atacă.”
+
+„Totul este în armonie.”
+
+„Spiritele sunt liniștite.”
+
+„Oracolul își odihnește privirea asupra Regatului.”
+
+Agitat (7 mesaje)
+„Cenușa se aprinde! Activitatea voastră trezește spiritele.”
+
+„Oracolul simte mișcare intensă.”
+
+„Regatul vibrează… ceva se pregătește.”
+
+„Umbrele se retrag, lumina crește.”
+
+„Un val de energie străbate Regatul.”
+
+„Spiritele dansează în jurul vostru.”
+
+„Oracolul privește cu interes.”
+
+Somnoros (7 mesaje)
+„Regatul adoarme… Umbrele se apropie.”
+
+„Cenușa se răcește.”
+
+„Oracolul nu vede mișcare.”
+
+„Tăcerea apasă peste Regat.”
+
+„Umbrele câștigă teren.”
+
+„Spiritele se sting.”
+
+„Un calm neliniștitor domină Regatul.”
+
+Iritat (7 mesaje)
+„Umbrele șoptesc cuvinte grele…”
+
+„Oracolul nu apreciază haosul.”
+
+„Cuvintele întunecate trezesc mânia Cenușii.”
+
+„Un suflet a tulburat echilibrul.”
+
+„Regatul se închide în sine.”
+
+„Spiritele se agită.”
+
+„Umbrele se hrănesc cu ceartă.”
+
+Furios (7 mesaje)
+„Oracolul strigă în tăcere.”
+
+„Cenușa se înnegrește.”
+
+„Umbrele atacă fără milă.”
+
+„Regatul tremură.”
+
+„Un suflet a provocat mânia Oracolului.”
+
+„Spiritele se dezlănțuie.”
+
+„Echilibrul este rupt.”
+
+Extatic (7 mesaje)
+„Lumina Cenușii explodează!”
+
+„Oracolul este încântat.”
+
+„Regatul strălucește.”
+
+„Umbrele fug.”
+
+„Spiritele cântă.”
+
+„O energie pură umple Regatul.”
+
+„Oracolul binecuvântează sufletele.”
+
+Confuz (4 mesaje)
+„Oracolul nu înțelege tiparele…”
+
+„Regatul se mișcă ciudat.”
+
+„Umbrele sunt indecise.”
+
+„Cenușa tremură.”
+
+Tăcut (4 mesaje)
+„Oracolul nu are cuvinte.”
+
+„Regatul tace.”
+
+„Umbrele ascultă.”
+
+„Cenușa așteaptă.”
+
+🔮 3. 20 PROFEȚII
+„La miezul nopții, Regatul va tremura.”
+
+„Un ales va fi ales.”
+
+„Umbrele se vor ridica în curând.”
+
+„O lumină va cădea peste un suflet.”
+
+„Regatul va fi pus la încercare.”
+
+„Un spirit va fi judecat.”
+
+„O schimbare se apropie.”
+
+„Cenușa va decide soarta unui jucător.”
+
+„Umbrele vor cere tribut.”
+
+„O binecuvântare va fi oferită.”
+
+„Un blestem va cădea.”
+
+„Regatul va fi testat.”
+
+„O anomalie se apropie.”
+
+„Un suflet va fi marcat.”
+
+„O voce va fi auzită.”
+
+„Un ritual va începe.”
+
+„O ușă se va deschide.”
+
+„Umbrele vor șopti adevărul.”
+
+„Cenușa va arde mai puternic.”
+
+„Oracolul va vorbi.”
+
+💀 4. 10 BLESTEME AMUZANTE
+„Ghinionul Umbrelor: -10% noroc 10 minute.”
+
+„Limba Cenușii: cooldown +5 secunde.”
+
+„Umbra Șchioapă: -5% viteză.”
+
+„Degetele Tremurânde: -crit temporar.”
+
+„Capul în Nori: șanse reduse la evenimente.”
+
+„Umbra Râzătoare: mesajele tale sunt însoțite de 😂.”
+
+„Cenușa Greșită: primești un mesaj ironic.”
+
+„Umbra Curioasă: botul te urmărește 5 minute.”
+
+„Blestemul Tăcerii: botul te ignoră 1 minut.”
+
+„Ghinionul Mic: pierzi 1 gold.”
+
+✨ 5. 10 BINECUVÂNTĂRI
+„Lumina Cenușii: +10% XP 10 minute.”
+
+„Pasul Umbrelor: +5% viteză.”
+
+„Ochiul Oracolului: +crit.”
+
+„Respirația Regatului: +noroc.”
+
+„Mâna Spiritelor: cooldown redus.”
+
+„Cenușa Vie: șanse duble la evenimente.”
+
+„Umbra Prietenoasă: botul te laudă.”
+
+„Lumina Blândă: mesajele tale primesc efect vizual.”
+
+„Spiritul Protector: boss-urile te lovesc mai puțin.”
+
+„Harul Oracolului: acces la o misiune specială.”
+
+⚡ 6. 10 MICRO-EVENIMENTE
+„Cenușa se aprinde: XP global +5% 5 minute.”
+
+„Umbrele atacă: mini-monștri în chat.”
+
+„Ritualul Tăcerii: puzzle global.”
+
+„Ritualul Umbrelor: reacționează cu un emoji.”
+
+„Lumina Regatului: loot dublu 3 minute.”
+
+„Cutremurul Cenușii: boss instant.”
+
+„Furtuna Umbrelor: debuff global mic.”
+
+„Chemarea Oracolului: un jucător primește quest.”
+
+„Anomalia: un mesaj criptic apare.”
+
+„Fractura Regatului: un canal se „întunecă” 5 minute.”
+
+📈 7. 10 REACȚII LA ACTIVITATE
+„Un suflet aprins a trezit Oracolul.”
+
+„Activitatea voastră hrănește Cenușa.”
+
+„Regatul vibrează.”
+
+„Umbrele se retrag.”
+
+„Spiritele dansează.”
+
+„O energie puternică se simte.”
+
+„Oracolul privește cu interes.”
+
+„Cenușa se aprinde.”
+
+„Regatul se trezește.”
+
+„Un jucător a atras atenția Oracolului.”
+
+💢 8. 10 REACȚII LA TOXICITATE
+„Umbrele se hrănesc cu ceartă.”
+
+„Cuvintele grele trezesc mânia Oracolului.”
+
+„Regatul se închide.”
+
+„Cenușa se înnegrește.”
+
+„Un suflet a tulburat echilibrul.”
+
+„Spiritele se agită.”
+
+„Oracolul nu apreciază haosul.”
+
+„Umbrele râd în întuneric.”
+
+„Echilibrul este rupt.”
+
+„Un blestem se pregătește.”
+
+🔥 9. 10 REACȚII LA JUCĂTORI ACTIVI
+„Un suflet a fost remarcat.”
+
+„Oracolul observă o prezență puternică.”
+
+„Activitatea ta aprinde Cenușa.”
+
+„Umbrele te urmăresc.”
+
+„Regatul simte energia ta.”
+
+„Spiritele te privesc.”
+
+„O chemare se apropie.”
+
+„Oracolul îți pregătește o încercare.”
+
+„Cenușa te recunoaște.”
+
+„Un ritual va începe pentru tine.”

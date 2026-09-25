@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.bot-control {
+  --background: 0 20% 4%;
+  --foreground: 32 24% 91%;
+  --card: 0 18% 8%;
+  --card-foreground: 32 24% 91%;
+  --popover: 0 18% 9%;
+  --popover-foreground: 32 24% 91%;
+  --primary: 356 61% 50%;
+  --primary-foreground: 32 24% 96%;
+  --secondary: 0 16% 14%;
+  --secondary-foreground: 32 24% 91%;
+  --muted: 0 14% 13%;
+  --muted-foreground: 20 10% 61%;
+  --accent: 0 18% 17%;
+  --accent-foreground: 32 24% 91%;
+  --border: 0 15% 20%;
+  --input: 0 15% 22%;
+  --ring: 356 61% 50%;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  min-height: 100vh;
+  background: radial-gradient(circle at 78% 0%, rgba(120, 56, 64, .12), transparent 34rem),
+    linear-gradient(rgba(147, 78, 84, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 78, 84, .025) 1px, transparent 1px), hsl(var(--background));
+  background-size: auto, 44px 44px, 44px 44px, auto;
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+}
+
+.bot-control * { box-sizing: border-box; }
+.bot-control .mod-eyebrow { color: hsl(var(--primary)); font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; }
+.bot-control .mod-tab-trigger { transition: color 180ms ease, background-color 180ms ease; }
+.bot-control .mod-tab-trigger[data-active="true"] { background: hsl(var(--primary) / .12); color: hsl(var(--foreground)); }
+.bot-control .mod-tab-content { animation: bot-tab-enter .3s ease-out both; }
+.bot-control .mod-setting-card { transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
+.bot-control .mod-setting-card--selected { border-color: hsl(var(--primary) / .4); background: linear-gradient(145deg, hsl(var(--primary) / .08), transparent); box-shadow: 0 10px 24px rgba(0, 0, 0, .14); }
+.bot-control select, .bot-control input { color: hsl(var(--foreground)); }
+.bot-control select option { background: #211518; }
+@keyframes bot-tab-enter { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }

@@ -1,0 +1,205 @@
+.discord-auth-loading {
+  --loading-bg: #0a0707;
+  --loading-card: #150c0d;
+  --loading-border: rgba(220, 90, 100, 0.18);
+  --loading-fg: #f2eceb;
+  --loading-muted: #a89a99;
+  --loading-accent: #d9505f;
+  --loading-accent-dark: #7a2530;
+
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding:
+    max(1.25rem, env(safe-area-inset-top, 0px))
+    max(1.25rem, env(safe-area-inset-right, 0px))
+    max(1.25rem, env(safe-area-inset-bottom, 0px))
+    max(1.25rem, env(safe-area-inset-left, 0px));
+  background:
+    radial-gradient(circle at 20% 15%, rgba(217, 80, 95, 0.1), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(217, 80, 95, 0.08), transparent 40%),
+    var(--loading-bg);
+  color: var(--loading-fg);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.discord-auth-loading__card {
+  display: flex;
+  width: min(100%, 340px);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 36px 32px;
+  border: 1px solid var(--loading-border);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent), var(--loading-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.discord-auth-loading__shield {
+  position: relative;
+  display: flex;
+  width: 76px;
+  height: 76px;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord-auth-loading__glow {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217, 80, 95, 0.35), transparent 70%);
+  filter: blur(3px);
+  animation: discord-auth-loading-pulse 2s ease-in-out infinite;
+}
+
+.discord-auth-loading__ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top-color: var(--loading-accent);
+  border-right-color: var(--loading-accent-dark);
+  border-radius: 50%;
+  animation: discord-auth-loading-spin 1.3s linear infinite;
+}
+
+.discord-auth-loading__shield svg {
+  position: relative;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 0 6px rgba(217, 80, 95, 0.55));
+  animation: discord-auth-loading-breathe 2s ease-in-out infinite;
+}
+
+.discord-auth-loading__eyebrow {
+  margin: 0;
+  color: var(--loading-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.discord-auth-loading__title {
+  margin: 0;
+  color: var(--loading-fg);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.discord-auth-loading__bar {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.discord-auth-loading__bar span {
+  display: block;
+  width: 35%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--loading-accent-dark), var(--loading-accent));
+  animation: discord-auth-loading-slide 1.3s ease-in-out infinite;
+}
+
+.discord-auth-loading__label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+  color: var(--loading-muted);
+  font-size: 13px;
+}
+
+.discord-auth-loading__dots {
+  display: inline-flex;
+}
+
+.discord-auth-loading__dots span {
+  opacity: 0;
+  animation: discord-auth-loading-blink 1.4s infinite;
+}
+
+.discord-auth-loading__dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.discord-auth-loading__dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes discord-auth-loading-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes discord-auth-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes discord-auth-loading-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes discord-auth-loading-blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes discord-auth-loading-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .discord-auth-loading__glow,
+  .discord-auth-loading__ring,
+  .discord-auth-loading__shield svg,
+  .discord-auth-loading__bar span,
+  .discord-auth-loading__dots span {
+    animation: none;
+  }
+
+  .discord-auth-loading__dots span {
+    opacity: 1;
+  }
+}

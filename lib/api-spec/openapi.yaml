@@ -1,0 +1,347 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Server healthy and bot connected
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+        "503":
+          description: Server running but bot is offline
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /moderation/session:
+    get:
+      operationId: moderationSession
+      tags: [moderation]
+      responses:
+        "200":
+          description: Current moderation web session
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ModerationSession" }
+  /moderation/login:
+    post:
+      operationId: moderationLogin
+      tags: [moderation]
+      deprecated: true
+      responses:
+        "410": { description: Code login removed; use Discord OAuth2 }
+  /moderation/auth-config:
+    get:
+      operationId: moderationAuthConfig
+      tags: [moderation]
+      responses:
+        "200":
+          description: Public login availability; never includes credentials
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationAuthConfig" } } }
+  /moderation/oauth/discord:
+    get:
+      operationId: moderationDiscordAuthorize
+      tags: [moderation]
+      responses:
+        "302": { description: Redirects to Discord with browser-bound OAuth state }
+        "503": { description: Discord OAuth is not configured }
+  /moderation/oauth/discord/callback:
+    get:
+      operationId: moderationDiscordCallback
+      tags: [moderation]
+      parameters:
+        - { name: code, in: query, schema: { type: string } }
+        - { name: state, in: query, schema: { type: string } }
+        - { name: error, in: query, schema: { type: string } }
+      responses:
+        "302": { description: Redirects to moderation after session creation or with a safe login error }
+  /moderation/logout:
+    post:
+      operationId: moderationLogout
+      tags: [moderation]
+      responses: { "204": { description: Session revoked } }
+  /moderation/storage/uploads/request-url:
+    post:
+      operationId: requestModerationStorageUploadUrl
+      tags: [moderation]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: "#/components/schemas/ModerationStorageUploadRequest" } } }
+      responses:
+        "200":
+          description: Owner-authorized temporary upload URL and object path
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationStorageUploadResponse" } } }
+        "400": { description: Invalid image metadata }
+        "401": { description: Moderation session is required }
+        "403": { description: Guild ownership is required }
+  /moderation/guilds/{guildId}/config:
+    parameters: [{ name: guildId, in: path, required: true, schema: { type: string } }]
+    get:
+      operationId: moderationGetConfig
+      tags: [moderation]
+      responses:
+        "200":
+          description: Guild moderation configuration and revision
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationConfigResponse" } } }
+    put:
+      operationId: moderationPutConfig
+      tags: [moderation]
+      parameters: [{ name: If-Match, in: header, required: true, schema: { type: string } }]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: "#/components/schemas/ModerationConfig" } } }
+      responses:
+        "200":
+          description: Saved configuration
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationConfigResponse" } } }
+        "409": { description: Stale configuration revision }
+  /moderation/guilds/{guildId}/protection-toggle:
+    parameters: [{ name: guildId, in: path, required: true, schema: { type: string } }]
+    put:
+      operationId: moderationProtectionToggle
+      tags: [moderation]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: "#/components/schemas/ProtectionToggleInput" } } }
+      responses:
+        "200":
+          description: Updated module setting and Discord announcement delivery status
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationConfigResponse" } } }
+        "401": { description: Moderation session is required }
+        "403": { description: Guild configuration access is required }
+        "400": { description: Invalid toggle }
+  /moderation/guilds/{guildId}/logs:
+    parameters: [{ name: guildId, in: path, required: true, schema: { type: string } }]
+    get:
+      operationId: moderationLogs
+      tags: [moderation]
+      responses:
+        "200":
+          description: Staff-facing enforcement logs (not owner audit)
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationLogPage" } } }
+  /moderation/guilds/{guildId}/logs/audit:
+    parameters: [{ name: guildId, in: path, required: true, schema: { type: string } }]
+    get:
+      operationId: moderationAuditLogs
+      tags: [moderation]
+      responses:
+        "200":
+          description: Owner/settings-admin audit trail
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationLogPage" } } }
+  /moderation/guilds/{guildId}/actions:
+    parameters: [{ name: guildId, in: path, required: true, schema: { type: string } }]
+    post:
+      operationId: moderationExecuteAction
+      tags: [moderation]
+      parameters:
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string, minLength: 16, maxLength: 128 } }
+        - { name: X-CSRF-Token, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ModerationCommandInput" }
+      responses:
+        "201":
+          description: Discord command executed
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationCommandResult" } } }
+        "200":
+          description: Previously completed command (not repeated)
+          content: { application/json: { schema: { $ref: "#/components/schemas/ModerationCommandResult" } } }
+        "400": { description: Missing or invalid command arguments }
+        "403": { description: Discord permissions or server policy deny the command }
+        "409": { description: Pending or uncertain command must not be repeated }
+components:
+  schemas:
+    ModerationAuthConfig:
+      type: object
+      required: [discordOAuthConfigured, authorizationUrl]
+      properties:
+        discordOAuthConfigured: { type: boolean }
+        authorizationUrl: { type: string }
+    ModerationCommandInput:
+      type: object
+      required: [type]
+      description: Member commands require targetId; channel commands require channelId. Mute requires durationMinutes, nick requires nickname, role requires roleId. Purge requires amount 1–100; slowmode requires amount 0–21600 seconds (0 disables).
+      properties:
+        type: { type: string, enum: [warn, mute, kick, ban, unmute, purge, slowmode, lock, unlock, nick, role] }
+        targetId: { type: string, pattern: "^\\d{5,25}$" }
+        channelId: { type: string, pattern: "^\\d{5,25}$" }
+        roleId: { type: string, pattern: "^\\d{5,25}$" }
+        reason: { type: string, minLength: 1, maxLength: 500 }
+        durationMinutes: { type: integer, minimum: 1, maximum: 40320 }
+        amount: { type: integer, minimum: 0, maximum: 21600 }
+        nickname: { type: string, minLength: 1, maxLength: 32 }
+    ModerationCommandResult:
+      type: object
+      properties:
+        actionId: { type: string }
+        caseId: { type: string }
+        summary: { type: string }
+    ModerationSession:
+      type: object
+      required: [authenticated]
+      properties:
+        authenticated: { type: boolean }
+        userId: { type: string }
+        csrfToken: { type: string }
+        expiresAt: { type: string, format: date-time }
+        guilds:
+          type: array
+          items:
+            type: object
+            required: [id, name, access]
+            properties:
+              id: { type: string }
+              name: { type: string }
+              access: { type: string, enum: [staff, manager, administrator, owner] }
+    ModerationConfig:
+      type: object
+      additionalProperties: true
+      description: Validated by the server's ModerationConfigSchema; use GET response config as the write body.
+    ProtectionToggleInput:
+      type: object
+      additionalProperties: false
+      required: [key, enabled]
+      properties:
+        key:
+          type: string
+          enum: [protection, autoMod, wordFilter, linkBlock, antiRaid, antiSpam, antiFlood, suspiciousBehavior, ai, manualTools, cases, audit, escalation, embeds]
+        enabled: { type: boolean }
+    ModerationStorageUploadRequest:
+      type: object
+      additionalProperties: false
+      required: [guildId, name, size, contentType]
+      properties:
+        guildId: { type: string, minLength: 5, maxLength: 25 }
+        name: { type: string, minLength: 1, maxLength: 200 }
+        size: { type: integer, minimum: 1, maximum: 10485760 }
+        contentType: { type: string, pattern: "^image/(jpeg|png|gif|webp)$" }
+    ModerationStorageUploadResponse:
+      type: object
+      required: [uploadURL, objectPath, metadata]
+      properties:
+        uploadURL: { type: string, format: uri }
+        objectPath: { type: string }
+        metadata: { $ref: "#/components/schemas/ModerationStorageUploadRequest" }
+    ModerationConfigResponse:
+      type: object
+      required: [config, version]
+      properties:
+        config: { $ref: "#/components/schemas/ModerationConfig" }
+        version: { type: integer }
+        updatedAt: { type: string, format: date-time, nullable: true }
+        notification:
+          type: object
+          required: [status, modules]
+          properties:
+            status: { type: string, enum: [not_applicable, sent, no_channel, bot_offline, guild_unavailable, channel_unavailable, send_failed] }
+            modules:
+              type: array
+              items: { type: string }
+    ModerationLog:
+      type: object
+      required: [id, guildId, eventType, detail, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        guildId: { type: string }
+        actorId: { type: string, nullable: true }
+        eventType: { type: string }
+        targetType: { type: string, nullable: true }
+        targetId: { type: string, nullable: true }
+        detail: { type: object, additionalProperties: true }
+        createdAt: { type: string, format: date-time }
+    ModerationLogPage:
+      type: object
+      required: [items]
+      properties:
+        items: { type: array, items: { $ref: "#/components/schemas/ModerationLog" } }
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        botOnline:
+          type: boolean
+        uptime:
+          type: number
+        botReadyAt:
+          type: string
+          nullable: true
+          description: ISO timestamp of when the bot last became ready/reconnected (null if never connected)
+        botUptime:
+          type: number
+          description: Seconds since the bot last became ready (0 if never connected or currently offline)
+        shardStatus:
+          type: string
+          nullable: true
+          description: Current shard connection state
+        oracleReplyMode:
+          type: string
+          enum: [full, degraded]
+          description: >-
+            "full" when the Oracle answers every reply (MessageContent intent
+            active); "degraded" when it only answers @mentions and ping-on
+            replies.
+        oracleReplyReason:
+          type: string
+          enum: [active, disabled, portal_toggle_missing]
+          description: >-
+            Why the Oracle is in its current reply mode. "active": full mode
+            running. "disabled": MessageContent feature not enabled by the
+            operator. "portal_toggle_missing": feature enabled but Discord
+            rejected the privileged intent (code 4014) so the bot fell back.
+        alertsConfigured:
+          type: boolean
+          description: >-
+            Whether DISCORD_ALERT_WEBHOOK_URL is set. When false, outage and
+            recovery push alerts are silently suppressed — operators will NOT
+            be notified of disconnects.
+        alertThresholdMs:
+          type: number
+          description: >-
+            Grace period in milliseconds before a transient disconnect escalates
+            to an outage alert (DISCONNECT_ALERT_THRESHOLD_MS, default 300000).
+        justiceWindowMinutes:
+          type: number
+          description: >-
+            How far back (in minutes) the justice scan looks for toxic messages.
+            Reflects the active ORACLE_JUSTICE_WINDOW_MINUTES value (default 30,
+            max 1440). Read once at startup; requires a restart to change.
+        justiceScanLimit:
+          type: number
+          description: >-
+            Maximum number of channel messages inspected per justice scan.
+            Reflects the active ORACLE_JUSTICE_SCAN_LIMIT value (default 100,
+            max 500). Read once at startup; requires a restart to change.
+      required:
+        - status
+        - botOnline
+        - uptime
+        - botReadyAt
+        - botUptime
+        - shardStatus
+        - oracleReplyMode
+        - oracleReplyReason
+        - alertsConfigured
+        - alertThresholdMs
+        - justiceWindowMinutes
+        - justiceScanLimit
+

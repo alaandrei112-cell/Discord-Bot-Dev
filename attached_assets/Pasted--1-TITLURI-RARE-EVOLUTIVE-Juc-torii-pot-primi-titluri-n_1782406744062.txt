@@ -1,0 +1,169 @@
+🔥 1. TITLURI RARE & EVOLUTIVE
+Jucătorii pot primi titluri în funcție de cât rezistă sau ce fac.
+
+Exemple:
+Umbra Începătorului – nivel 1–5
+
+Călătorul Cenușii – nivel 6–10
+
+Vânătorul Umbrelor – nivel 11–20
+
+Sfărâmătorul Abisului – nivel 21–40
+
+Arhontele Întunecat – nivel 41–80
+
+Eternul Cenușii – nivel 100+
+
+Titlurile apar lângă numele lor în leaderboard.
+
+🩸 2. CRITICE SPECIALE (ANIMAȚII TEXT)
+Când jucătorul dă un critic, apare un mesaj special:
+
+Cod
+💥 LOVITURĂ DEVASTATOARE 💥
+Umbrele se rup în două sub puterea ta!
+Ai provocat {damage} damage critic!
+sau
+
+Cod
+🔥 FURIA CENUȘII SE DEZLĂNȚUIE 🔥
+Lovitura ta a sfâșiat creatura pentru {damage} damage!
+Face jocul mai cinematic.
+
+🧿 3. ABILITĂȚI ACTIVE (cu cooldown)
+Pe lângă click, jucătorul poate avea o abilitate specială:
+
+Exemple:
+„Lovitura Umbrei” – damage x2 (cooldown 5 minute)
+
+„Scut de Cenușă” – reduce damage 50% pentru 1 atac
+
+„Evadare” – 100% evitare la următorul atac
+
+„Rugăciunea Arhontei” – +20% XP pentru 2 minute
+
+Abilitățile se folosesc rar, dar schimbă lupta.
+
+🧩 4. CLASE RPG (cu bonusuri pasive)
+Jucătorii își aleg o clasă:
+
+Cavaler al Cenușii
++2 damage, +5 HP
+
+Umbrolog
++3% evitare, +1% critic
+
+Străjerul Arșiței
++10% XP
+
+Alchimist Stins
++20% Oboli câștigați
+
+Rătăcitorul Fumului
++5% șansă să nu fie lovit
+
+Clasa rămâne permanentă.
+
+🧿 5. SISTEM DE RARITĂȚI LA MONȘTRI
+Monștrii pot fi:
+
+Comun
+
+Rar
+
+Epic
+
+Legendar
+
+Mitic (șansă 0.1%)
+
+Fiecare raritate are bonusuri la reward.
+
+Exemplu mesaj:
+Cod
+🌑 MONSTRU EPIC NIVEL 37 – Avatarul Ruinei 🌑
+Umbrele se cutremură… ceva puternic s-a trezit.
+🧱 6. MINI-BOSS LA FIECARE 10 NIVELURI
+La fiecare 10 monștri, apare un mini-boss:
+
+Cod
+🔥 MINI-BOSS NIVEL 30 – Colosul Cenușii 🔥
+HP: 1200
+Damage: 45–60
+Hit chance: 80%
+Reward dublu.
+
+🐉 7. BOSS FINAL (la finalul eventului)
+La minutul 59 apare un boss final:
+
+Cod
+🐉 DRAGONUL STINS – NIVEL {X} 🐉
+Ultima încercare a Regatului.
+Doar cei vii pot lovi.
+Cei care îl lovesc primesc bonus special.
+
+🪙 8. SISTEM DE CHESTURI
+Jucătorii pot primi cufere:
+
+Cufăr Comun
+
+Cufăr Rar
+
+Cufăr Epic
+
+Cufăr Legendar
+
+Cuferele se deschid cu click și dau Oboli, XP sau bonusuri.
+
+🧭 9. SISTEM DE ZONE (schimbă monștrii)
+Pe măsură ce nivelul monstrului crește, se schimbă zona:
+
+Nivel 1–10: Pădurea Umbrelor
+
+Nivel 11–25: Catacombele Regale
+
+Nivel 26–50: Ținuturile Arse
+
+Nivel 51–100: Turnul Vânturilor Negre
+
+Nivel 101+: Abisul Fumegând
+
+Mesajul se schimbă automat:
+
+Cod
+🌫️ Ai pătruns în Catacombele Regale.
+Umbrele sunt mai reci aici… și mai flămânde.
+🧙 10. ORACOLUL CENUȘII – MESAJ RANDOM
+Din când în când, Oracolul poate trimite un mesaj:
+
+Cod
+🔮 ORACOLUL CENUȘII ȘOPTEȘTE 🔮
+„Nu toți cei care luptă vor supraviețui… dar toți vor fi amintiți.”
+sau
+
+Cod
+🕯️ „Umbrele cresc… pregătește-te.” 🕯️
+Face atmosfera mai vie.
+
+🏆 11. SISTEM DE TITLURI PENTRU TOP 3
+La finalul eventului:
+
+Locul 1 → „Eroul Umbrelor”
+
+Locul 2 → „Supraviețuitorul Cenușii”
+
+Locul 3 → „Vânătorul Stins”
+
+Titlurile pot fi afișate în profil.
+
+🧨 12. EVENIMENTE RANDOM ÎN TIMPUL LUPTEI
+Exemple:
+
+„Explozie de Cenușă”
+Toți jucătorii primesc +10% damage pentru 1 minut.
+
+„Umbre Instabile”
+Monștrii au 20% șansă să rateze timp de 30 secunde.
+
+„Furtună de Fum”
+Toți jucătorii pierd 5 HP instant.
